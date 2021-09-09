@@ -16,7 +16,7 @@ function Classes() {
   console.log(allClasses);
   return (
     <Grid container spacing={2}>
-      <Grid item xs={7}>
+      <Grid item xs={12}>
         <h1>All Classes</h1>
         {!allClasses.length ? (
           <CircularProgress />
@@ -27,9 +27,6 @@ function Classes() {
             })}
           </div>
         )}
-      </Grid>
-      <Grid item xs={5}>
-        <CreateClassForm />
       </Grid>
     </Grid>
   );

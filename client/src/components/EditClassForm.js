@@ -27,15 +27,13 @@ function EditClassForm() {
     duration: Yup.string().required("Required"),
     reservedClientIDs: Yup.string().required("Required"),
   });
+  const dispatch = useDispatch();
   const allClasses = useSelector((state) => state.classes);
   const history = useHistory();
   const { id } = useParams();
-  console.log(id);
   const selectedClass = allClasses.find(
     (item) => item.classID.toString() === id
   );
-  console.log(selectedClass);
-  const dispatch = useDispatch();
   return (
     <Container maxWidth="sm" className="form">
       <Grid item xs={12}>
@@ -46,7 +44,7 @@ function EditClassForm() {
         initialValues={selectedClass}
         onSubmit={(values) => {
           dispatch(updateAClass(selectedClass.classID, values));
-          history.push("/adding-new");
+          history.push("/classes");
         }}
       >
         <Form>
@@ -84,7 +82,7 @@ function EditClassForm() {
               <TextField name="reservedClientIDs" label="Reserved Client" />
             </Grid> */}
             <Grid item xs={12}>
-              <Button type="submit">Submit Form</Button>
+              <Button type="submit">Edit Form</Button>
             </Grid>
           </Grid>
         </Form>

@@ -9,6 +9,7 @@ import TimePicker from "./FormsUI/TimePicker";
 import Button from "./FormsUI/Button";
 import { createNewClass } from "../Actions/classes";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function CreateClassForm() {
   const initialClass = {
@@ -41,9 +42,10 @@ function CreateClassForm() {
     reservedClientIDs: Yup.string().required("Required"),
   });
   const allClasses = useSelector((state) => state.classes);
-
   const [inputClass, setInputClass] = useState(initialClass);
   const dispatch = useDispatch();
+  const history = useHistory();
+
   return (
     <Container maxWidth="sm" className="form">
       <Grid item xs={12}>
@@ -54,6 +56,7 @@ function CreateClassForm() {
         initialValues={{ ...initialClass }}
         onSubmit={(values) => {
           dispatch(createNewClass({ ...values, classID: Date.now() }));
+          history.push("/classes");
         }}
       >
         <Form>

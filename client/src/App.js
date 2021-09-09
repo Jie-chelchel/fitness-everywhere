@@ -33,29 +33,13 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/signin" component={AccountBox} />
           <Route path="/signup" component={AccountBox} />
-          <Route exact path="/classes" component={MyClasses} />
+          <Route exact path="/classes" component={Classes} />
           <Route path="/class-details/:id" component={ClassDetails} />
           <Route path="/bookings" component={MyBookings} />
           <Route path="/upcoming-classes" component={UpcomingClasses} />
-          <Route path="/adding-new" component={Classes} />
+          <Route path="/adding-new" component={CreateClassForm} />
           <Route path="/classes/edit/:id" component={EditClassForm} />
           <Route path="/history" component={History} />
-          {/* <Route path="/" component={Home} />
-
-      <AppContainer>
-        <Route exact path="/" component={Home}>
-          <AccountBox />
-        </Route>
-        <Route path="/signin" component={LoginForm} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/classes" component={Classes} />
-        <Route path="/classes/:id" component={Class} />
-
-        <Route path="/newclass" component={CreateClassForm} />
-
-        {/* <Route path="/" component={Home} />
-
-      <Route path="/" component={Home} /> */}
         </Switch>
       </AppContainer>
     </BrowserRouter>
