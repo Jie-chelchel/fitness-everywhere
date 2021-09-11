@@ -67,8 +67,8 @@ let mockUserData = [
 let mockClassData = [
   {
     classID: "1",
-    startDate: "Aug 22,2021",
-    startTime: "6:00pm",
+    startDate: "2021-03-03",
+    startTime: "16:00",
     duration: "60",
     status: "Finished",
     location: "New York City, NY",
@@ -81,8 +81,8 @@ let mockClassData = [
   },
   {
     classID: "2",
-    startDate: "Aug 23,2021",
-    startTime: "7:00pm",
+    startDate: "2021-02-03",
+    startTime: "17:00",
     duration: "70",
     status: "Finished",
     location: "Boston, MA",
@@ -95,8 +95,8 @@ let mockClassData = [
   },
   {
     classID: "3",
-    startDate: "Aug 24,2021",
-    startTime: "8:00pm",
+    startDate: "2021-02-03",
+    startTime: "08:00",
     duration: "45",
     status: "Upcoming",
     location: "Los Angeles, CA",
@@ -109,8 +109,8 @@ let mockClassData = [
   },
   {
     classID: "4",
-    startDate: "Aug 25,2021",
-    startTime: "6:30pm",
+    startDate: "2021-03-05",
+    startTime: "16:30",
     duration: "50",
     status: "Upcoming",
     location: "Miami, FL",
@@ -123,8 +123,8 @@ let mockClassData = [
   },
   {
     classID: "5",
-    startDate: "Aug 26,2021",
-    startTime: "9:30pm",
+    startDate: "2021-03-05",
+    startTime: "19:30",
     duration: "30",
     status: "Upcoming",
     location: "Chicago, IL",
@@ -137,8 +137,8 @@ let mockClassData = [
   },
   {
     classID: "6",
-    startDate: "Aug 27,2021",
-    startTime: "12:30pm",
+    startDate: "2021-03-06",
+    startTime: "12:30",
     duration: "25",
     status: "Upcoming",
     location: "Nashville, TN",

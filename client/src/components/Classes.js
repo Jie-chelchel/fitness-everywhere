@@ -2,9 +2,7 @@ import Class from "./Class";
 import React, { useEffect } from "react";
 import { fetchClasses } from "../Actions/classes.js";
 import { Grid, CircularProgress } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import CreateClassForm from "./CreateClassForm";
 
 function Classes() {
   const dispatch = useDispatch();
@@ -13,7 +11,6 @@ function Classes() {
   }, []);
 
   const allClasses = useSelector((state) => state.classes);
-  console.log(allClasses);
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
